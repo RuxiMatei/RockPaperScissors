@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+
+
+    <div id = "PlayWme">
+        <p id = "message">I'm bored...</p>
+        <button id = "pl">Play with me?</button>
+    </div> 
+
+<div id = "gridContainer">
+    <header>
+        <div id = "title">
+            <h1>
+                Rock, Paper, Scissors
+            </h1>
+        </div>
+        <div id = "subtitle">
+            <h3>
+                Your computer is bored and has invited you to 
+                a friendly game of Rock-Paper-Scissors! 
+            </h3>
+            <h4>Can you defeat it first to 5?</h4>
+        </div>
+    </header>
+
+    <div class = "containerBig">
+        <div class = "containerBig2">
+            <p id = "score">Score</p>
+            <div id = "scoreTables">
+                    <div class = "scoreTable"><p>You</p></div>
+                    <div class = "scoreTable">   </div>
+                    <div class = "scoreTable"><p>PC</p></div>
+                    <div class = "scoreTable"><p id = "scoreP">0</p></div>
+                    <div class = "scoreTable"><p id = "line">-</p></div>
+                    <div class = "scoreTable"><p id = "scoreC">0</p></div>    
+            </div>
+        </div>
+
+        <div id = "containerSmall">
+            <p id = "weapon">Choose your weapon!</p>
+            <div id = "containerXSmall">
+                <div id = "Rock" class = "playersChoice">
+                    <img class = "choice"  src = "img/rock.png" alt = "Rock">
+                </div>
+                <div id = "Paper" class = "playersChoice">
+                    <img class = "choice" src = "img/paper.png" alt = "Paper">
+                </div>
+                <div id = "Scissors" class = "playersChoice">
+                    <img class = "choice"  src = "img/scissors.png" alt = "Scissors">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id = "Winner">
+        <p id = "Wins"> winner </p>
+        <div id = "tryAgain">
+            <p id = "tryAgainContent"> Try Again? </p>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Copyright &copy The Odin Project 2021</p> 
+        <div class = "lastContainerIPromise">
+            <p>Made by Ruxi with &#9829 &nbsp</p>
+            <a href = "https://github.com/RuxiMatei/RockPaperScissors">
+                <img id = "gitlogo" src = "img/gitb.png" style = "padding: 10px;">
+            </a>
+        </div>
+    </footer>
+</div>
+
+    <script src = "script.js"></script>
+    
+</body>
+</html>

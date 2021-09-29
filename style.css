@@ -1,0 +1,344 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background-color: #eddab9;
+    margin: 0 auto;
+
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, 
+footer{
+    width: 100%;
+    background-color: #e8789a;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    margin-bottom: 20px;
+}
+footer{
+    margin-top: 20px;
+}
+#title,
+#subtitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#title{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#subtitle{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+h1, h3, h4{
+    margin: 0;
+    display: flex;
+}
+h1{
+    font-family: 'sans serif';
+    font-size: xx-large;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+}
+h3, h4{
+    font-style: oblique;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#pl{
+    height: 120px;
+    padding: 0;
+    border-radius: 60px;
+    border: solid 5px #6f1d57;
+    transition-duration: 0.4s;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f5cb94;
+    background-color: #6f1d57;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#pl:hover{
+    background-color: #f5cb94;
+    color: #6f1d57;
+    border-color: #f5cb94;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40),0 17px 50px 0 rgba(0,0,0,0.40);
+}
+
+
+
+
+/* ------ Initial Button ------- */
+
+#PlayWme{
+    height:110%;
+    width: 100%;
+    margin: 0;
+    background-color: #eddab9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    z-index: 2;
+}
+#message{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #6f1d57;
+    font-size: 50px;
+    margin: 50px;
+}
+
+
+
+
+
+#gridContainer{
+    margin: 0;
+    padding: 0px;
+
+    display: grid;
+    grid-template-columns: [first] 100% [line2];
+    grid-template-rows: [row1-start] 20% [row1-end] 30% [third-line] 30% [fourth-line] 20% [fifth-line];
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #eddab9;
+}
+.containerBig{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+    margin-bottom: 70px;
+}
+#score{
+    font-size: 30px;
+    color:#6f1d57;
+    font-weight: bold;
+    margin: 30px;
+    text-align: center;
+}
+#scoreTables{
+    border-radius: 20px;
+    background-color: #fdc482;
+    color: #6f1d57;
+
+    padding: 0px;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: [first] 30% [line2] 20% [line3] auto;
+    grid-template-rows: [row1-start] 50% [row1-end] auto [third-line];
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+}
+.scoreTable{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.scoreTable > p{
+    font-size: 20px;
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+}
+.scoreTable > #scoreP,
+.scoreTable > #scoreC,
+.scoreTable > #line{
+    font-size: 40px;
+}
+
+
+#containerSmall{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+#weapon{
+    margin: 0;
+    font-size: 20px;
+    color:#6f1d57;
+    font-style: oblique;
+    text-shadow: 2px 2px 7px #6f1d57;
+    padding-bottom: 30px;
+}
+#containerXSmall{
+    flex-direction: row;
+    display: flex;
+}
+.playersChoice{
+    background-color: #6f1d57;
+    border-radius: 40px;
+    width: 120px;
+    display: flex;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.choice{
+    height: 120px;
+    padding: 0;
+    border-radius: 40px;
+    transition-duration: 0.4s;
+}
+.choice1{
+    height: 120px;
+    padding: 0;
+    border-radius: 40px;
+    transition-duration: 0.4s;
+    width: 100px;
+    height: 100px;
+}
+.choice:hover{
+    background-color: #b1308a;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40),0 17px 50px 0 rgba(0,0,0,0.40);
+}
+.containerBig2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 4px #e8789a;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 40px 0 rgba(207, 0, 114, 0.63);
+}
+
+#containerMedium{
+    margin: 20px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: [first] 110px [line2] 200px [line3] 110px;
+    grid-template-rows: [row1-start] 120px [row1-end];
+}
+#playerChoice, #computerChoice, #Text{
+    justify-self: center;
+    padding: 20px;
+}
+#Text{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #009980;
+}
+#buttonPlay{
+    background-color: #e8789a;
+    color: #f5cb94;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    margin: 30px;
+    margin-bottom:0;
+
+    transition-duration: 0.2s;
+}
+#buttonPlay:hover{
+    background-color: #f5cb94;
+    color: #6f1d57;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    padding-bottom: 35px;
+    padding-top: 35px;
+}
+.lastContainerIPromise{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+.lastContainerIPromise > p{
+    display: inline-flex;
+}
+#gitlogo{
+    display: inline;
+    height: 60px;
+}
+
+
+
+#Winner{
+    height: 115%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+
+    background-color: rgba(110, 2, 61, 1);
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+}
+#Wins{
+    color: #fdc482;
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+#tryAgain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009980;
+    border-radius: 20px;
+    height: 100px;
+    width: 300px;
+    transition-duration: 0.3s;
+}
+#tryAgain:hover{
+    color: #6f1d57;
+    background-color: #b1308a;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#tryAgainContent{
+    color: #fdc482;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+
