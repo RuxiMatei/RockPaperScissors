@@ -6,6 +6,9 @@ function buttonPress(){
 butonPlayWMe.addEventListener('click',buttonPress);
 
 
+let plCh = document.getElementById('playerChoice');
+let pcCh = document.getElementById('computerChoice');
+let txt = document.getElementById('contentsRslt'); 
 
 let scorePlayer = document.getElementById("scoreP");
 let scoreComputer = document.getElementById("scoreC");
@@ -20,9 +23,9 @@ buttons.forEach((playersChoice) => {
         let cv = playersChoice.querySelector("img"); 
         playerSelection = cv.alt.toLowerCase();
         
-        if (counter1 != 0){
+      /*  if (counter1 != 0){
             let elment = document.getElementById("containerMedium"); elment.remove();
-        }
+        }*/
 
         [scoreP, scoreC, displayResult] = oneRound(playerSelection, computerSelection);
         
@@ -37,33 +40,26 @@ buttons.forEach((playersChoice) => {
 
     });
 });
-let iTryAgain = document.getElementById('tryAgain');
-iTryAgain.addEventListener('click', whatToDoIfAgain);
 
+let wins = document.getElementById("Winner");
+let buts = document.getElementById("tryAgain");
 function declareWinner(scoreP, scoreC){
 
     let winner = "";
     if (scoreP > scoreC){
-        winner = 'You are the winner! Congratulations!';
+        winner = 'You are the winner!';
     } else {
         winner = 'I won! &#x1F60A';
     }
     console.log(winner, scoreP, scoreC);
-    let elmnts = document.getElementById("containerMedium"); elmnts.remove()
-    let wins = document.getElementById("Wins");
+
     wins.innerHTML = winner;
-  /*  let final = document.createElement("div");
-    let attr = document.createAttribute("id");       
-    attr.value = "Winner"; 
-    final.setAttributeNode(attr);
-    final.innerHTML = 
-        ''+
-    ''
-    let Bd = document.querySelector("body");
-    Bd.appendChild(final);*/
-    let elmnet = document.getElementById("Winner");
-    elmnet.style = "z-index: 3;";
+    wins.style = 'font-family: "Indie Flower"; font-weight: bold; font-size: 35px; color: gold; padding-top: 10px; padding-bottom: 5px; -webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: #b44800;';
+
+    buts.innerHTML = 'Try Again?';
+    buts.style = "font-family: Dancing Script; font-size: 30px; color: gold; border-radius: 20px; margin: 10px; padding: 10px; margin-bottom: 20px; margin-top: 10px; margin-left: 150px; margin-right: 150px;";
 }
+
 
 function whatToDoIfAgain(){
     counter = 0; counter1 = 0;
@@ -71,9 +67,17 @@ function whatToDoIfAgain(){
     scoreC = 0;
     scorePlayer.innerHTML = 0;
     scoreComputer.innerHTML = 0;
-    let elmnet = document.getElementById("Winner");
-    elmnet.style = "z-index: -3;";
+    wins.innerHTML = "";
+    buts.innerHTML = "";
+    txt.innerHTML = "";
+    buts.style = "background-color: #eddab9;"
+    plCh.innerHTML = "Your choice";
+    pcCh.innerHTML = "PC's choice";
+    plCh.style = "color: grey; font-family:'Indie Flower'; font-size: 20px; text-align: center;";
+    pcCh.style = "color: grey; font-family:'Indie Flower'; font-size: 20px; text-align: center;";
 }
+let tryAgain = document.getElementById('tryAgain');
+tryAgain.addEventListener('click', whatToDoIfAgain);
 
 
 function oneRound(playerSelection, computerSelection){
@@ -156,21 +160,10 @@ function resultText(playerSelection,computerSelection, scoreP, scoreC){
     }
     return [displayResult, scoreP, scoreC];
 }
-
 function createResult(displayResult, imagesP, imagesC){
-    medC = document.createElement('div');
-    let att = document.createAttribute("id");       
-    att.value = "containerMedium"; 
-    medC.setAttributeNode(att);
-    medC.innerHTML = '<div id = "playerChoice">'+
-    '<img src = "'+ imagesP +'" class = "choice1">'+
-'</div>'+
-'<div id = "Text">'+
-    '<p id = "contentsRslt">' + displayResult + '</id>'+
-'</div>'+
-'<div id = "computerChoice">'+
-    '<img src = "'+ imagesC +'" class = "choice1">'+
-'</div>';
-    let Bc = document.querySelector(".containerBig2");
-    Bc.append(medC); // create body for app
+    plCh.innerHTML = '<img src = "'+ imagesP +'" class = "choice1">';
+    txt.innerHTML = displayResult;
+    pcCh.innerHTML = '<img src = "'+ imagesC +'" class = "choice1">';
+    plCh.style = "color: grey; font-family:'Indie Flower'; font-size: 20px;";
+    pcCh.style = "color: grey; font-family:'Indie Flower'; font-size: 20px;"; 
 }
