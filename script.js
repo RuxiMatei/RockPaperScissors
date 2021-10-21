@@ -54,10 +54,10 @@ function declareWinner(scoreP, scoreC){
     console.log(winner, scoreP, scoreC);
 
     wins.innerHTML = winner;
-    wins.style = 'font-family: "Indie Flower"; font-weight: bold; font-size: 35px; color: gold; padding-top: 10px; padding-bottom: 5px; -webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: #b44800;';
+    wins.style = 'font-family: "Indie Flower"; font-weight: bold; font-size: 25px; color: gold; padding-top: 5px; padding-bottom: 5px; -webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: #b44800;';
 
     buts.innerHTML = 'Try Again?';
-    buts.style = "font-family: Dancing Script; font-size: 30px; color: gold; border-radius: 20px; margin: 10px; padding: 10px; margin-bottom: 20px; margin-top: 10px; margin-left: 150px; margin-right: 150px;";
+    buts.style = "font-family: Dancing Script; font-size: 25px; color: gold; border-radius: 20px; margin: 5px; padding: 5px; margin-bottom: 10px; margin-top: 5px; margin-left: 150px; margin-right: 150px;";
 }
 
 
