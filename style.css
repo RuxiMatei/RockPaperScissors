@@ -99,7 +99,7 @@ h4{
 /* ------ Initial Button ------- */
 
 #PlayWme{
-    height:120vh;
+    height:100vh;
     width: 100vw;
     margin: 0 auto;
     margin-right: 0;
@@ -294,17 +294,16 @@ footer{
     align-items: center;
     justify-content: center;    
 
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-footer > p, .lastContainerIPromise > p{
+    padding-bottom: 10px;
+    padding-top: 10px;
     font-family: 'Comfortaa';
 }
-.lastContainerIPromise{
+
+#lastContainerIPromise{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 250px;
 }
 .lastContainerIPromise > p{
     display: inline-flex;
@@ -313,7 +312,6 @@ footer > p, .lastContainerIPromise > p{
     display: inline;
     height: 60px;
 }
-
 
 #contSmall1{
     display: flex;

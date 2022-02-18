@@ -3,7 +3,7 @@ let butonPlayWMe = document.getElementById("pl");
 function buttonPress(){
     let elmnt = document.getElementById("PlayWme"); elmnt.remove(); //remove initial button
 }
-butonPlayWMe.addEventListener('click',buttonPress);
+butonPlayWMe.addEventListener('click', buttonPress);
 
 
 let plCh = document.getElementById('playerChoice');
